@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* Scss 여러줄 주석 CSS 코드로 변경될 때, 해석됩니다. */
+/*콘텐츠 영역*/
+.contents { height: 500px; }
+.contents .visual .p-1 { font-size: 26px; }
+.contents .visual .p-2 { font-size: 60px; }
+.contents .visual .p-3 { font-size: 21px; }
+.contents .visual .btn-non { font-size: 16px; cursor: default; }
+.contents .visual figure { position: relative; }
+.contents .visual figure figcaption { position: absolute; top: 0; }

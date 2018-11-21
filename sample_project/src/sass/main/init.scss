@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+// bourbon 믹스인
+@import "bourbon/bourbon";
+// Scss 변수 (Variables: $)
+@import "parts/variables";
+// Scss 믹스인(Mixins)
+@import "parts/mixins";
+
+// Scss 한줄 주석
+// css 코드로 변경될 때, 해석되지 않습니다.
+/* Scss 여러줄 주석 CSS 코드로 변경될 때, 해석됩니다. */
+
+/*콘텐츠 영역*/
+.contents {
+	.visual {
+		width: 100%;
+		height: 863px;
+		&.visual-1 {
+			background: url(http://design.autopay.co.kr/joon/koresco-chiak/main/visual_1.jpg) no-repeat center;	
+		}
+		figure {
+			position: relative;
+			img {
+				display: block;
+			}
+			figcaption {
+				display: block;
+				margin-top: 330px;
+				width: 100%;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				color: #fff;
+				.p-1 {
+					font-size: 26px;
+				}
+				.p-2 {
+					font-size: 60px;
+				}
+				.p-3 {
+					font-size: 21px;
+				}
+				.btn-non {
+					display: inline-block;
+					padding: 3px 8px;
+					font-size: 16px;
+					cursor: default;
+					background: $bg-color;
+				}
+			}
+		}
+	}
+}

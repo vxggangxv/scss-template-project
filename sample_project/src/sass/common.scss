@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+// bourbon 믹스인
+@import "bourbon/bourbon";
+// Scss 변수 (Variables: $)
+@import "parts/variables";
+// Scss 믹스인(Mixins)
+@import "parts/mixins";
+
+@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+//@import url(http://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	font-family: $nnrSquare; 
+	line-height: 1.3; 
+	letter-spacing: -0.3px; 
+	color: #000;
+}
+img {
+	max-width: 100%;
+}
+
+/*-bxSlider 재정의-*/
+.bx-wrapper,
+.bx-wrapper .bx-viewport {
+	position: relative; 
+	margin: 0 auto; 
+	border: none; 
+	box-shadow: none; 
+	background: none;
+}
+.bx-controls {
+	display: none;
+}
+/*.bx-wrapper .bx-controls-direction {
+	position: absolute;
+	width: 100%;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	margin-top: -22.5px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	display: block;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	background: none;
+	width: 45px;
+	height: 45px;
+	top: 0;
+	margin-top: 0;
+	z-index: 1;
+}
+
+.bx-wrapper .bx-prev {
+	left: 20px;
+}
+
+.bx-wrapper .bx-next {
+	right: 20px;
+}
+
+.bx-wrapper .bx-controls-direction,
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto,
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	display: none;
+}*/
+
+/*----------------------------------------------------------------------*/
+.wrapper {
+	min-width: 1180px;
+}
+/*공통스타일*/
+%centerThis {
+	width: 1180px;
+	margin: 0 auto;
+}
+.contents {
+	position: relative;
+	margin: 0 auto;
+}
+.group {
+	position: relative;
+	@extend %centerThis;
+	&::after {
+		content: "";
+		display: block;
+		clear:both;
+	}
+}
+.row {
+	position: relative;
+}
+.fw-b {
+	font-weight: 700 !important;
+}
+.fw-eb {
+	font-weight: 800 !important;
+}
+.fz-12 {
+	font-size: 12px !important;
+}
+.fz-13 {
+	font-size: 13px !important;
+}
+.fz-14 {
+	font-size: 14px !important;
+}
+.fz-16 {
+	font-size: 16px !important;
+}
+.fz-18 {
+	font-size: 18px !important;
+}
+.fz-20 {
+	font-size: 18px !important;
+}
+
+.appe-reset {
+	font-family: $nnrSquare;
+}
+.wrap {
+	box-sizing: border-box;
+}
+.area {
+	position: relative;
+}
+input[type=password] {
+	font-family: $nnGothic;
+}
+
+/*공통 서브비쥬얼*/
+.contents {
+	.subVisual {
+		padding-top: 140px;
+		box-sizing: border-box;
+		color: #fff;
+		height: 318px;
+		background: #eee url(http://img.sampobeach.co.kr/event/subVisual.jpg) no-repeat center;
+		.mainTxt {
+			text-align: right;
+			>* {
+				text-shadow: 3px 3px 2px rgba(0,0,0, .25);
+				letter-spacing: -0.7px;
+			}
+			.p-1 {
+				font-size: 22px;
+				font-weight: 700;
+			}
+			h2 {
+				font-size: 54px;
+				margin-top: 5px;
+				letter-spacing: -2px;
+				line-height: 1.2;
+			}
+			.p-2 {
+				font-size: 16px;
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+/*해더영역*/
+.header {
+	position: absolute;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 86px;
+	border-bottom: 1px solid #cecece;
+	z-index: 99;
+	.gnbArea {
+		padding-top: 35px;
+		.logo {
+			float: left;
+			margin-top: -20px;
+		}
+		.gnb {
+			position: relative;
+			float: right;
+			.menu {
+				> li {
+					position: relative;
+					float: left;
+					&.fst {
+						&:before {
+							display: none;
+						}
+						> a {
+							padding-left: 0;
+						}
+					}
+					> a {
+						display: block;
+						padding: 0 15px;
+						font-size: 19px;
+					}
+					&.lst {
+						margin-right: 20px;
+					}
+					&.li-evt {
+						margin-left: 10px;
+						margin-top: -5px;
+						> .btn-evt {
+							padding: 5px 7px;
+							display: inline-block;
+							font-size: 15px;
+							color: #316ab2;
+							border: 1px solid #316ab2;
+						}
+					}
+					&:hover a {
+						color: $fg-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*푸터영역*/
+.footer {
+	padding: 55px 0px;
+	position: relative;
+	background: #ededed;
+	position: relative;
+	[class*=-area] {
+		position: relative;
+		float: left;
+		letter-spacing: -0.7px;
+	}
+	.left-area {
+		width: 540px;
+		.privacyBtn {
+			position: relative;
+			top: 2px;
+			display: inline-block;
+			margin: 0px 2px;
+			font-size: 14px;
+			background: #fff;
+			padding: 0 10px;
+			line-height: 2em;
+		}
+	}
+	.logo-f {
+		display: inline-block;
+		margin-right: 15px;
+	}
+	.address {
+		margin-top: 20px;
+		font-size: 15px;
+		line-height: 1.6;
+		.s-1 {
+			color: $fg-color2;
+			margin-right: 5px;
+		}
+	}
+	small {
+		display: block;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-size: inherit;
+	}
+	.right-area {
+		float: right;
+		width: 460px;
+		box-sizing: border-box;
+		padding-left: 60px;
+		.row {
+			line-height: 1.6em;
+			.s-1 {
+				color: $fg-color2;
+				margin-right: 5px;
+			}
+			& + .row {
+				margin-top: 15px;
+				
+			}
+		}
+	}
+}

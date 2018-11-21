@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* Scss 여러줄 주석 CSS 코드로 변경될 때, 해석됩니다. */
+/*콘텐츠 영역*/
+.contents .visual { width: 100%; height: 863px; }
+.contents .visual.visual-1 { background: url(http://design.autopay.co.kr/joon/koresco-chiak/main/visual_1.jpg) no-repeat center; }
+.contents .visual figure { position: relative; }
+.contents .visual figure img { display: block; }
+.contents .visual figure figcaption { display: block; margin-top: 330px; width: 100%; text-align: center; position: absolute; top: 0; color: #fff; }
+.contents .visual figure figcaption .p-1 { font-size: 26px; }
+.contents .visual figure figcaption .p-2 { font-size: 60px; }
+.contents .visual figure figcaption .p-3 { font-size: 21px; }
+.contents .visual figure figcaption .btn-non { display: inline-block; padding: 3px 8px; font-size: 16px; cursor: default; background: #0061b4; }
